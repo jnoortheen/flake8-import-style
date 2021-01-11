@@ -6,7 +6,7 @@
 
 A [flake8](http://flake8.pycqa.org/en/latest/) plugin to ensure explicit module imports.
 
-    pip install flake8_import_style
+    pip install flake8_typing_import_style
     flake8 *.py
 
 Errors (enabled by default):

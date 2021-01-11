@@ -1,5 +1,5 @@
 python ?= python3
-package = flake8_import_style
+package = flake8_typing_import_style
 
 all: $(package).egg-info
 $(package).egg-info: setup.py requirements-dev.txt bin/pip

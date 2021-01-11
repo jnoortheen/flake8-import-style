@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "flake8-typing-import-style"
+version = "0.5.0"
+description = "A flake8 plugin to ensure typing module import convention"
+license = "ISC"
+classifiers = [
+    "Framework :: Flake8",
+    "License :: OSI Approved :: ISC License (ISCL)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+]
+homepage = "https://github.com/jnoortheen/flake8-import-style"
+authors = ["Stefano Palazzo <stefano.palazzo@gmail.com>", "Noortheen Raja J <jnoortheen@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.6,<4"
+setuptools = "*"
+
+# equals to setup.py's entrypoints - https://python-poetry.org/docs/pyproject/#plugins
+flake8 = "^3.8.4"
+[tool.poetry.plugins] # Optional super table
+[tool.poetry.plugins."flake8.extension"]
+"I9" = "flake8_typing_import_style:I9"
+
+[tool.poetry.dev-dependencies]
+coverage = "^5.3.1"
+flake8-logging-format = "*"
+flake8-mock = "*"
+flake8-builtins = "*"
+pytest = "^6.2.1"
